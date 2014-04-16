@@ -2,11 +2,11 @@ ProjetoCadCurriculo
 ===================
 
 Sistema para cadastro de curriculos
--Entidades (empresa, candidato, vaga):
+-Entidades (Empresa, Candidato, Vaga):
 	
-Abstração-----------------Nomes no Formulario(Front-end)
+ENTIDADE.ATRIBUTO -------------- NOME NO FORM(Front-end)
 
-Empresa
+Empresa(nome,cnpj,telefone,email,end):
 
 	Nome ------------------- nome
 	CNPJ ------------------- cnpj
@@ -14,7 +14,7 @@ Empresa
 	Email ------------------ email
 	Local_Funcionamento ---- end
 
-Candidato
+Candidato(nome,cpf,telefone,email,end,nasc,escolaridade,exp,area,apendices):
 
 	Nome ------------------- nome
 	CPF -------------------- cpf
@@ -27,32 +27,36 @@ Candidato
 	Área de atuação -------- area
 	Apendices -------------- apendices
 
-Vaga
-	Carga Horária ---------- carga-horaria
+Vaga(cargaHoraria,remuneracao,requisitos,desc):
+	Carga Horária ---------- cargaHoraria
 	Remuneração ------------ remuneracao
-	Requesitos ------------- requisitos
-	Descrição -------------- desc
+	Requisitos ------------- requisitos
+	Descrição -------------- descricao
 
--Funcionalidades		
 
-Nome da func. ------------- Padrão da URL
+-NOME DA FUNC. -------------------- PADRÃO DA URL
 
-Listar Candidato ---------- /candidato/index
-Cadastrar Candidato ------- /candidato/cadastrar
-Editar Candidato ---------- /candidato/editar
-Pesquisar Candidato ------- /candidato/pesquisar
-Gerar Curriculo Candidato - /candidato/gerar-curriculo
+FuncionalidadesCandidato:		
 
-Listar Empresa ------------ /empresa/index
-Cadastrar Empresa --------- /empresa/cadastrar
-Editar Empresa ------------ /empresa/editar
+	Listar Candidato ---------- /candidato/index
+	Cadastrar Candidato ------- /candidato/cadastrar
+	Editar Candidato ---------- /candidato/editar
+	Pesquisar Candidato ------- /candidato/pesquisar
+	Gerar Curriculo Candidato - /candidato/gerar-curriculo
 
-Listar Vagas -------------- /vaga/index
-Cadastrar Vagas ----------- /vaga/cadastrar
-Editar Vagas -------------- /vaga/editar
-Pesquisar Vagas ----------- /vaga/pesquisar
-Vincular interesse Vaga --- /vaga/vincular   
-Desvincular interesse Vaga  /vaga/desvincular
+FuncionalidadesEmpresa:
+
+	Listar Empresa ------------ /empresa/index
+	Cadastrar Empresa --------- /empresa/cadastrar
+	Editar Empresa ------------ /empresa/editar
+
+FuncionalidadesVaga:
+	Listar Vagas -------------- /vaga/index
+	Cadastrar Vagas ----------- /vaga/cadastrar
+	Editar Vagas -------------- /vaga/editar
+	Pesquisar Vagas ----------- /vaga/pesquisar
+	Vincular interesse Vaga --- /vaga/vincular   
+	Desvincular interesse Vaga  /vaga/desvincular
 
 
 Exibir vagas (público geral)
