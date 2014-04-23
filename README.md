@@ -8,7 +8,8 @@ ENTIDADE.ATRIBUTO -------------- NOME NO FORM(Front-end)
 
 Empresa(nome,cnpj,telefone,email,end):
 
-	Nome ------------------- nome
+	Razão_Social ----------- razaoSocial
+	Nome_Fantasia ---------- nomeFantasia
 	CNPJ ------------------- cnpj
 	Telefone --------------- telefone
 	Email ------------------ email
