@@ -1,16 +1,23 @@
 package models;
 
 public class Empresa {
-private String nome;
+private String razaoSocial;
+private String nomeFantasia;
 private String cnpj;
 private String telefone;
 private String email;
 private String end;
 /**
- * @return the nome
+ * @return the razaoSocial
  */
-public String getNome() {
-	return nome;
+public String getRazaoSocial() {
+	return razaoSocial;
+}
+/**
+ * @return the nomeFantasia
+ */
+public String getNomeFantasia() {
+	return nomeFantasia;
 }
 /**
  * @return the cnpj
@@ -37,10 +44,16 @@ public String getEnd() {
 	return end;
 }
 /**
- * @param nome the nome to set
+ * @param nome the razaoSocial to set
  */
-public void setNome(String nome) {
-	this.nome = nome;
+public void setRazaoSocial(String razaoSocial) {
+	this.razaoSocial = razaoSocial;
+}
+/**
+ * @param nomeFantasia the cnpj to set
+ */
+public void setNomeFantasia(String nomeFantasia) {
+	this.nomeFantasia = nomeFantasia;
 }
 /**
  * @param cnpj the cnpj to set
