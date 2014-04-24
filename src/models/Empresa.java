@@ -14,7 +14,7 @@ public String getRazaoSocial() {
 	return razaoSocial;
 }
 /**
- * @return the nomeFantasia
+ * @return the  nomeFantasia
  */
 public String getNomeFantasia() {
 	return nomeFantasia;
