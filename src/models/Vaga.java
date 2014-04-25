@@ -8,6 +8,14 @@ public class Vaga {
 	/**
 	 * @return the cargaHoraria
 	 */
+	public Vaga(String cargaHoraria, String remuneracao, String requisitos,
+			String desc) {
+		super();
+		this.cargaHoraria = cargaHoraria;
+		this.remuneracao = remuneracao;
+		this.requisitos = requisitos;
+		this.desc = desc;
+	}
 	public String getCargaHoraria() {
 		return cargaHoraria;
 	}

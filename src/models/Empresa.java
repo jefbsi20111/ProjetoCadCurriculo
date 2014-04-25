@@ -2,6 +2,16 @@ package models;
 
 public class Empresa {
 private String razaoSocial;
+public Empresa(String razaoSocial, String nomeFantasia, String cnpj,
+		String telefone, String email, String end) {
+	super();
+	this.razaoSocial = razaoSocial;
+	this.nomeFantasia = nomeFantasia;
+	this.cnpj = cnpj;
+	this.telefone = telefone;
+	this.email = email;
+	this.end = end;
+}
 private String nomeFantasia;
 private String cnpj;
 private String telefone;

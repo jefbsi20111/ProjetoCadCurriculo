@@ -11,6 +11,22 @@ public class Candidato {
 	private String exp;
 	private String area;
 	private String apendices;
+	
+	public Candidato(String nome, String cpf, String telefone, String email,
+			String end, String nasc, String escolaridade, String exp,
+			String area, String apendices) {
+		super();
+		this.nome = nome;
+		this.cpf = cpf;
+		this.telefone = telefone;
+		this.email = email;
+		this.end = end;
+		this.nasc = nasc;
+		this.escolaridade = escolaridade;
+		this.exp = exp;
+		this.area = area;
+		this.apendices = apendices;
+	}
 	/**
 	 * @return the nome
 	 */
