@@ -21,7 +21,7 @@ public class Filtro implements Filter {
 	  User user = (User) s.getAttribute("User");
 	  if (user != null){
 	
-		String nome = user.getNome();
+		String nome = user.getEmail();
 		String senha = user.getSenha();
 		
 		if((nome == "admin") && (senha == "abc123")){
