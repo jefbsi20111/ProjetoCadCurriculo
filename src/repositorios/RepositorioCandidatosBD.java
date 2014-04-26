@@ -7,11 +7,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import models.Candidato;
-import daos.DAOFuncionario;
+import daos.DAO;
 
 
 
-public class RepositorioCandidatosBD extends DAOFuncionario implements RepositorioCandidatos{
+public class RepositorioCandidatosBD extends DAO implements RepositorioCandidatos{
 	
 
 
@@ -46,7 +46,7 @@ public class RepositorioCandidatosBD extends DAOFuncionario implements Repositor
             try {
                 con.rollback();
             } catch (SQLException ex1) {
-                throw new Exception(ex1);
+                throw new SQLException(ex1);
             }
 
             throw new SQLException(ex);

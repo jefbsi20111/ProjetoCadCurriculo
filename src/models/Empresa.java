@@ -2,6 +2,10 @@ package models;
 
 public class Empresa {
 private String razaoSocial;
+private String nomeFantasia;
+private String cnpj;
+private String telefone;
+private String email;
 public Empresa(String razaoSocial, String nomeFantasia, String cnpj,
 		String telefone, String email, String end) {
 	super();
@@ -12,10 +16,7 @@ public Empresa(String razaoSocial, String nomeFantasia, String cnpj,
 	this.email = email;
 	this.end = end;
 }
-private String nomeFantasia;
-private String cnpj;
-private String telefone;
-private String email;
+
 private String end;
 /**
  * @return the razaoSocial
