@@ -12,7 +12,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-public class Filtro implements Filter { 
+public class FiltroEmpresa implements Filter { 
 
 	public void doFilter(ServletRequest req,
       ServletResponse res, FilterChain chain) throws IOException, ServletException{
@@ -21,7 +21,7 @@ public class Filtro implements Filter {
 	  User user = (User) s.getAttribute("User");
 	  if (user != null){
 	
-		String nome = user.getNome();
+		String nome = user.getEmail();
 		String senha = user.getSenha();
 		
 		if((nome == "admin") && (senha == "abc123")){

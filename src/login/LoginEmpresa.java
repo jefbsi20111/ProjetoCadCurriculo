@@ -14,7 +14,7 @@ import models.User;
 
 //@WebServlet(name="login", urlPatterns={"/login"})
 
-public class LoginCandidato extends HttpServlet {
+public class LoginEmpresa extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 

@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import models.Candidato;
-import daos.DAO;
+import dao.DAO;
 
 
 

@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 import models.Candidato;
 import models.Empresa;
-import daos.DAO;
+import dao.DAO;
 
 public class RepositorioEmpresasBD extends DAO implements RepositorioEmpresas {
 

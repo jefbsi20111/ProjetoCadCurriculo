@@ -7,7 +7,7 @@ public class User {
 	private String senha;
 	private int id;
 	
-	public user(String email, String senha, int id) {
+	public User(String email, String senha, int id) {
 		this.email = email;
 		this.senha = senha;
 		this.id = id;
@@ -29,7 +29,7 @@ public class User {
 	/**
 	 * @return the id
 	 */
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
@@ -43,6 +43,7 @@ public class User {
 		this.senha = senha;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
+}
