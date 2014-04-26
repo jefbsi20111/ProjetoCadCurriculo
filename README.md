@@ -65,3 +65,19 @@ Exibir vagas (público geral)
 Funcionalidade que não tem interface com o usuário:
 
 Enviar email para candidatos no ato do cadastramento de uma vaga que condiz com o perfil dele.
+
+
+
+Para escolaridade código:
+
+
+	value="0">Ensino Médio Imcompleto
+    value="1">Ensino Médio Completo
+    value="2">Ensino Superior Imcompleto
+    value="3">Ensino Superior Completo
+
+
+
+    Se o id é 0, é candidato. Se o id for diferente de 0 é empresa.
+
+    

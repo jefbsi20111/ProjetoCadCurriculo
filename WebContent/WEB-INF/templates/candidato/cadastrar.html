@@ -80,7 +80,7 @@
             <label>CPF</label>
           </div>
           <div class="col-md-3">
-            <input name="cpf" type="text" class="form-control required cpf">
+            <input name="cpf" type="text" class="form-control cpf">
           </div>
         </div>
 
@@ -89,7 +89,7 @@
             <label>Telefone</label>
           </div>
           <div class="col-md-3">
-            <input name="telefone" type="text" class="form-control required telefone">
+            <input name="telefone" type="text" class="form-control telefone">
           </div>
         </div>
 
@@ -108,11 +108,11 @@
           </div>
           <div class="col-md-3">
             <select class="form-control" name="escolaridade">
-			  <option value="0">Ensino Médio Imcompleto</option>
-			  <option value="1">Ensino Médio Completo</option>
-			  <option value="2">Ensino Superior Imcompleto</option>
-			  <option value="3">Ensino Superior Completo</option>
-			</select>
+      			  <option value="0">Ensino Médio Imcompleto</option>
+      			  <option value="1">Ensino Médio Completo</option>
+      			  <option value="2">Ensino Superior Imcompleto</option>
+      			  <option value="3">Ensino Superior Completo</option>
+      			</select>
           </div>
         </div>
 <hr>
@@ -166,6 +166,7 @@
   $(document).ready(function(){
     $(".telefone").mask("(99) 9999-9999");
     $(".cpf").mask("999-999-999-99");
+    $(".data-nascimento").mask("99/99/9999");
   });
   </script>
 
