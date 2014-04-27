@@ -25,7 +25,7 @@ public class AddVagaServlet extends HttpServlet {
 		
 
 		Vaga vaga;
-		vaga = new Vaga(cargaHoraria,remuneracao,requisitos,desc);
+		vaga = new Vaga(cargaHoraria,remuneracao,requisitos);
 
 		req.getRequestDispatcher("ListServlet").forward(req, resp);
 

@@ -29,8 +29,7 @@ public class AddCandidatoServlet extends HttpServlet {
 		String apendices = req.getParameter("apendices");
 
 		Candidato candidato;
-		candidato = new Candidato(nome, cpf, telefone, email, end, nasc,
-				escolaridade, exp, area, apendices);
+		candidato = new Candidato(nome, cpf,email,escolaridade, exp, area);
 
 		req.getRequestDispatcher("ListServlet").forward(req, resp);
 

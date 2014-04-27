@@ -22,11 +22,11 @@ public class AddEmpresaServlet extends HttpServlet {
 		String cnpj = req.getParameter("cnpj");
 		/*String telefone = req.getParameter("telefone");*/
 		String email = req.getParameter("email");
-		String end = req.getParameter("senha");
-		
+		String end = req.getParameter("end");
+		String senha = req.getParameter("senha");
 
 		Empresa empresa;
-		empresa = new Empresa(razaoSocial,nomeFantasia,cnpj,telefone,email,end);
+		empresa = new Empresa(nomeFantasia,cnpj,email,end,senha);
 
 		req.getRequestDispatcher("ListServlet").forward(req, resp);
 

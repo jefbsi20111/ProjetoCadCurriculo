@@ -89,7 +89,7 @@ public class Candidato {
 	}
 
 	public String getSenha(){
-		return senha
+		return senha;
 	}
 
 	/**

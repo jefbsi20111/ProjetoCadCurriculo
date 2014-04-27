@@ -21,17 +21,13 @@ String end, String senha) {
 	/*this.telefone = telefone;*/
 	this.email = email;
 	/*this.end = end;*/
-	this.sena = senha;
+	this.senha = senha;
 
 }
 
 
-	/**
-	 * @return the razaoSocial
-	 */
-	public String getRazaoSocial() {
-		return razaoSocial;
-	}
+	
+	
 
 	/**
 	 * @return the  nomeFantasia
@@ -83,12 +79,8 @@ String end, String senha) {
 	}
 
 
-	/**
-	 * @param nome the razaoSocial to set
-	 */
-	public void setRazaoSocial(String razaoSocial) {
-		this.razaoSocial = razaoSocial;
-	}
+	
+	
 
 	/**
 	 * @param nomeFantasia the cnpj to set

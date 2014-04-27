@@ -17,7 +17,7 @@ import javax.servlet.annotation.WebFilter;
 @WebFilter(filterName = "filtro-candidato",
 urlPatterns = {"/candidato/index.jsp"})
 
-public class FiltroEmpresa implements Filter { 
+public class FiltroCandidato implements Filter { 
 
 	public void doFilter(ServletRequest req,
       ServletResponse res, FilterChain chain) throws IOException, ServletException{
