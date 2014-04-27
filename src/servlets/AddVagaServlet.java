@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.Empresa;
 import models.Vaga;
 
 @WebServlet(name="cadastrar-vaga", urlPatterns={"/vagas/cadastrar"})

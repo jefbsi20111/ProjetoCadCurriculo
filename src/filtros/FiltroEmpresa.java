@@ -24,13 +24,14 @@ public class FiltroEmpresa implements Filter {
 	  HttpServletRequest request = (HttpServletRequest) req;  	
 	  HttpSession s = request.getSession();
 	  User user = (User) s.getAttribute("User");
+	  
 	  if (user != null){
 	
 		String nome = user.getEmail();
 		String senha = user.getSenha();
-		int id = user.getSenha();
+		int id = user.getId();
 		
-		if((nome == "admin") && (senha == "abc123")){
+		if((nome == "empresa") && (senha == "123")&& (id != 0)){
 			chain.doFilter(req, res );
 		}
 	

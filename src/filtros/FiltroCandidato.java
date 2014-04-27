@@ -29,9 +29,9 @@ public class FiltroEmpresa implements Filter {
 	
 		String nome = user.getEmail();
 		String senha = user.getSenha();
-		int id = user.getSenha();
+		int id = user.getId();
 		
-		if((nome == "admin") && (senha == "abc123")){
+		if((nome == "candidato") && (senha == "123") && (id == 0)){
 			chain.doFilter(req, res );
 		}
 	
