@@ -15,7 +15,7 @@ import javax.servlet.annotation.WebFilter;
 
 
 @WebFilter(filterName = "filtro-empresa",
-urlPatterns = {"/empresa/*"})
+urlPatterns = {"/empresa/index.jsp"})
 
 public class FiltroEmpresa implements Filter { 
 

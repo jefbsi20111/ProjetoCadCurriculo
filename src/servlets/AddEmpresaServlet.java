@@ -6,7 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.annotation.WebServlet;
 import models.Empresa;
 
 @WebServlet(name="cadastrar-empresa", urlPatterns={"/empresa/cadastrar"})
