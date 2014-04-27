@@ -10,18 +10,20 @@ import javax.servlet.http.HttpServletResponse;
 import models.Candidato;
 import models.Empresa;
 
+@WebServlet(name="cadastrar-empresa", urlPatterns={"/empresa/cadastrar"})
+
 public class AddEmpresaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		String razaoSocial = req.getParameter("razaoSocial");
-		String nomeFantasia = req.getParameter("nomeFantasia");
+
+		String nomeFantasia = req.getParameter("nome");
 		String cnpj = req.getParameter("cnpj");
-		String telefone = req.getParameter("telefone");
+		/*String telefone = req.getParameter("telefone");*/
 		String email = req.getParameter("email");
-		String end = req.getParameter("end");
+		String end = req.getParameter("senha");
 		
 
 		Empresa empresa;

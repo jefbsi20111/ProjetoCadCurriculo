@@ -14,8 +14,8 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.annotation.WebFilter;
 
 
-@WebFilter(filterName = "filtro-empresa",
-urlPatterns = {"/empresa/*"})
+@WebFilter(filterName = "filtro-candidato",
+urlPatterns = {"/candidato/*"})
 
 public class FiltroEmpresa implements Filter { 
 
@@ -24,6 +24,7 @@ public class FiltroEmpresa implements Filter {
 	  HttpServletRequest request = (HttpServletRequest) req;  	
 	  HttpSession s = request.getSession();
 	  User user = (User) s.getAttribute("User");
+	  
 	  if (user != null){
 	
 		String nome = user.getEmail();

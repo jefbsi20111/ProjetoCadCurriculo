@@ -23,11 +23,11 @@ public class RepositorioEmpresasBD extends DAO implements RepositorioEmpresas {
 		        try {
 		            con = getConnection(false);
 		            pstmt = con.prepareStatement("INSERT INTO EMPRESA (RAZAOSOCIAL, NOMEFANTASIA, CNPJ, TELEFONE, EMAIL (?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
-		            pstmt.setString(1, empresa.getRazaoSocial());
-		            pstmt.setString(2, empresa.getNomeFantasia());
-		            pstmt.setString(3, empresa.getCnpj());
-		            pstmt.setString(4, empresa.getTelefone());
-		            pstmt.setString(5, empresa.getEmail());
+          
+		            pstmt.setString(1, empresa.getNomeFantasia());
+		            pstmt.setString(2, empresa.getCnpj());
+		            pstmt.setString(3, empresa.getTelefone());
+		            pstmt.setString(4, empresa.getEmail());
 		            pstmt.executeUpdate();
 		            rs = pstmt.getGeneratedKeys();
 

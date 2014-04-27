@@ -5,6 +5,7 @@ public class Candidato {
 	private String cpf;
 	private String telefone;
 	private String email;
+	private String senha;
 	private String end;
 	private String nasc;
 	private String escolaridade;
@@ -12,20 +13,19 @@ public class Candidato {
 	private String area;
 	private String apendices;
 	
-	public Candidato(String nome, String cpf, String telefone, String email,
-			String end, String nasc, String escolaridade, String exp,
-			String area, String apendices) {
+	public Candidato(String nome, String cpf, String email, String escolaridade,
+	 String exp, String area) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
-		this.telefone = telefone;
+		/*this.telefone = telefone;*/
 		this.email = email;
-		this.end = end;
-		this.nasc = nasc;
+		/*this.end = end;*/
+		/*this.nasc = nasc;*/
 		this.escolaridade = escolaridade;
 		this.exp = exp;
 		this.area = area;
-		this.apendices = apendices;
+		/*this.apendices = apendices;*/
 	}
 	/**
 	 * @return the nome
@@ -87,6 +87,18 @@ public class Candidato {
 	public String getApendices() {
 		return apendices;
 	}
+
+	public String getSenha(){
+		return senha
+	}
+
+	/**
+	 * @param senha the senha to set
+	 */
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
 	/**
 	 * @param nome the nome to set
 	 */

@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import models.Candidato;
 
+@WebServlet(name="cadastrar-candidato", urlPatterns={"/candidato/cadastrar"})
+
 public class AddCandidatoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -17,10 +19,10 @@ public class AddCandidatoServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String nome = req.getParameter("nome");
 		String cpf = req.getParameter("cpf");
-		String telefone = req.getParameter("telefone");
+		/*String telefone = req.getParameter("telefone");*/
 		String email = req.getParameter("email");
-		String end = req.getParameter("end");
-		String nasc = req.getParameter("nasc");
+		/*String end = req.getParameter("end");*/
+		/*String nasc = req.getParameter("nasc");*/
 		String escolaridade = req.getParameter("escolaridade");
 		String exp = req.getParameter("exp");
 		String area = req.getParameter("area");
