@@ -46,4 +46,8 @@ public class User {
 	public void setId(int id) {
 		this.id = id;
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e31ca425939e6dee990e7252b818526ce5f16f19
