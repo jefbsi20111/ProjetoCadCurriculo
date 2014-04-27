@@ -23,6 +23,7 @@ public class Filtro implements Filter {
 	
 		String nome = user.getEmail();
 		String senha = user.getSenha();
+		int id = user.getSenha();
 		
 		if((nome == "admin") && (senha == "abc123")){
 			chain.doFilter(req, res );
