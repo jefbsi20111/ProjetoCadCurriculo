@@ -14,10 +14,10 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.annotation.WebFilter;
 
 
-@WebFilter(filterName = "filtro-empresa",
-urlPatterns = {"/empresa/index.jsp"})
+@WebFilter(filterName = "filtro-candidato",
+urlPatterns = {"/candidato/index.jsp"})
 
-public class FiltroEmpresa implements Filter { 
+public class FiltroCandidato implements Filter { 
 
 	public void doFilter(ServletRequest req,
       ServletResponse res, FilterChain chain) throws IOException, ServletException{
@@ -31,7 +31,7 @@ public class FiltroEmpresa implements Filter {
 		String senha = user.getSenha();
 		int id = user.getId();
 		
-		if((nome == "empresa") && (senha == "123")&& (id != 0)){
+		if((nome == "candidato") && (senha == "123") && (id == 0)){
 			chain.doFilter(req, res );
 		}
 	

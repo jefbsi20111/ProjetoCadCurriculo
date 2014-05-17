@@ -107,6 +107,12 @@
       </div>
     </div>
   </div>
+
+  <hr>
+
+  <a href="/empresa/cadastrar.html" class="btn-primary">Cadastro Empresa</a>
+  <br>
+  <a href="/candidato/cadastrar.html" class="btn-primary">Cadastro Candidato</a>
  
 
 </div> <!-- /.container -->

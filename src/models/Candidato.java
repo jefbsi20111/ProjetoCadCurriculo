@@ -1,10 +1,32 @@
 package models;
 
+
+
 public class Candidato {
+<<<<<<< HEAD
+	private Long id;
+	private String nome_candidato;
+	private String email_candidato;
+	private String senha_candidato;
+	private String data_nasc_candidato;
+	private String cpf_candidato;
+	private String end_candidato;
+	private String telefone_candidato;
+	private int escolaridade_candidato;
+	private String exp_candidato;
+	private String area_atuacao_candidato;
+	private String apendices_candidato;
+	/**
+	 * @return the nome_candidato
+	 */
+	public String getNome_candidato() {
+		return nome_candidato;
+=======
 	private String nome;
 	private String cpf;
 	private String telefone;
 	private String email;
+	private String senha;
 	private String end;
 	private String nasc;
 	private String escolaridade;
@@ -12,140 +34,172 @@ public class Candidato {
 	private String area;
 	private String apendices;
 	
-	public Candidato(String nome, String cpf, String telefone, String email,
-			String end, String nasc, String escolaridade, String exp,
-			String area, String apendices) {
+	public Candidato(String nome, String cpf, String email, String escolaridade,
+	 String exp, String area) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
-		this.telefone = telefone;
+		/*this.telefone = telefone;*/
 		this.email = email;
-		this.end = end;
-		this.nasc = nasc;
+		/*this.end = end;*/
+		/*this.nasc = nasc;*/
 		this.escolaridade = escolaridade;
 		this.exp = exp;
 		this.area = area;
-		this.apendices = apendices;
+		/*this.apendices = apendices;*/
+>>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd
 	}
 	/**
-	 * @return the nome
+	 * @return the email_candidato
 	 */
-	public String getNome() {
-		return nome;
+	public String getEmail_candidato() {
+		return email_candidato;
 	}
 	/**
-	 * @return the cpf
+	 * @return the senha_candidato
 	 */
-	public String getCpf() {
-		return cpf;
+	public String getSenha_candidato() {
+		return senha_candidato;
 	}
 	/**
-	 * @return the telefone
+	 * @return the data_nasc_candidato
 	 */
-	public String getTelefone() {
-		return telefone;
+	public String getData_nasc_candidato() {
+		return data_nasc_candidato;
 	}
 	/**
-	 * @return the email
+	 * @return the cpf_candidato
 	 */
-	public String getEmail() {
-		return email;
+	public String getCpf_candidato() {
+		return cpf_candidato;
 	}
 	/**
-	 * @return the end
+	 * @return the end_candidato
 	 */
-	public String getEnd() {
-		return end;
+	public String getEnd_candidato() {
+		return end_candidato;
 	}
 	/**
-	 * @return the nasc
+	 * @return the telefone_candidato
 	 */
-	public String getNasc() {
-		return nasc;
+	public String getTelefone_candidato() {
+		return telefone_candidato;
 	}
 	/**
-	 * @return the escolaridade
+	 * @return the escolaridade_candidato
 	 */
-	public String getEscolaridade() {
-		return escolaridade;
+	public int getEscolaridade_candidato() {
+		return escolaridade_candidato;
 	}
 	/**
-	 * @return the exp
+	 * @return the exp_candidato
 	 */
-	public String getExp() {
-		return exp;
+	public String getExp_candidato() {
+		return exp_candidato;
 	}
 	/**
-	 * @return the area
+	 * @return the area_atuacao_candidato
 	 */
-	public String getArea() {
-		return area;
+	public String getArea_atuacao_candidato() {
+		return area_atuacao_candidato;
 	}
 	/**
-	 * @return the apendices
+	 * @return the apendices_candidato
 	 */
-	public String getApendices() {
-		return apendices;
+	public String getApendices_candidato() {
+		return apendices_candidato;
+	}
+
+	public String getSenha(){
+		return senha;
+	}
+
+	/**
+	 * @param senha the senha to set
+	 */
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	/**
+	 * @param nome_candidato the nome_candidato to set
+	 */
+	public void setNome_candidato(String nome_candidato) {
+		this.nome_candidato = nome_candidato;
 	}
 	/**
-	 * @param nome the nome to set
+	 * @param email_candidato the email_candidato to set
 	 */
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setEmail_candidato(String email_candidato) {
+		this.email_candidato = email_candidato;
 	}
 	/**
-	 * @param cpf the cpf to set
+	 * @param senha_candidato the senha_candidato to set
 	 */
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setSenha_candidato(String senha_candidato) {
+		this.senha_candidato = senha_candidato;
 	}
 	/**
-	 * @param telefone the telefone to set
+	 * @param data_nasc_candidato the data_nasc_candidato to set
 	 */
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	public void setData_nasc_candidato(String data_nasc_candidato) {
+		this.data_nasc_candidato = data_nasc_candidato;
 	}
 	/**
-	 * @param email the email to set
+	 * @param cpf_candidato the cpf_candidato to set
 	 */
-	public void setEmail(String email) {
-		this.email = email;
+	public void setCpf_candidato(String cpf_candidato) {
+		this.cpf_candidato = cpf_candidato;
 	}
 	/**
-	 * @param end the end to set
+	 * @param end_candidato the end_candidato to set
 	 */
-	public void setEnd(String end) {
-		this.end = end;
+	public void setEnd_candidato(String end_candidato) {
+		this.end_candidato = end_candidato;
 	}
 	/**
-	 * @param nasc the nasc to set
+	 * @param telefone_candidato the telefone_candidato to set
 	 */
-	public void setNasc(String nasc) {
-		this.nasc = nasc;
+	public void setTelefone_candidato(String telefone_candidato) {
+		this.telefone_candidato = telefone_candidato;
 	}
 	/**
-	 * @param escolaridade the escolaridade to set
+	 * @param escolaridade_candidato the escolaridade_candidato to set
 	 */
-	public void setEscolaridade(String escolaridade) {
-		this.escolaridade = escolaridade;
+	public void setEscolaridade_candidato(int escolaridade_candidato) {
+		this.escolaridade_candidato = escolaridade_candidato;
 	}
 	/**
-	 * @param exp the exp to set
+	 * @param exp_candidato the exp_candidato to set
 	 */
-	public void setExp(String exp) {
-		this.exp = exp;
+	public void setExp_candidato(String exp_candidato) {
+		this.exp_candidato = exp_candidato;
 	}
 	/**
-	 * @param area the area to set
+	 * @param area_atuacao_candidato the area_atuacao_candidato to set
 	 */
-	public void setArea(String area) {
-		this.area = area;
+	public void setArea_atuacao_candidato(String area_atuacao_candidato) {
+		this.area_atuacao_candidato = area_atuacao_candidato;
 	}
 	/**
-	 * @param apendices the apendices to set
+	 * @param apendices_candidato the apendices_candidato to set
 	 */
-	public void setApendices(String apendices) {
-		this.apendices = apendices;
+	public void setApendices_candidato(String apendices_candidato) {
+		this.apendices_candidato = apendices_candidato;
+	}
+	
+	public boolean equals(Candidato a) {
+        if (a.getEmail_candidato() == this.email_candidato) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+	public Long getId_candidato() {
+		return id;
+	}
+	public void setId_candidato(Long id) {
+		this.id = id;
 	}
 
 }

@@ -6,12 +6,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import jdbc.ConnectionFactory;
 import models.Candidato;
-import dao.DAO;
 
 
 
-public class RepositorioCandidatosBD extends DAO implements RepositorioCandidatos{
+public class RepositorioCandidatosBD extends ConnectionFactory implements RepositorioCandidatos{
 	
 
 

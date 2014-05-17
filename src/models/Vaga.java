@@ -1,21 +1,24 @@
 package models;
 
 public class Vaga {
+	
 	private String cargaHoraria;
 	private String remuneracao;
 	private String requisitos;
 	private String desc;
+	
+
 	/**
 	 * @return the cargaHoraria
 	 */
-	public Vaga(String cargaHoraria, String remuneracao, String requisitos,
-			String desc) {
+	public Vaga(String cargaHoraria, String remuneracao, String requisitos) {
 		super();
 		this.cargaHoraria = cargaHoraria;
 		this.remuneracao = remuneracao;
 		this.requisitos = requisitos;
-		this.desc = desc;
 	}
+
+
 	public String getCargaHoraria() {
 		return cargaHoraria;
 	}

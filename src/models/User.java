@@ -43,7 +43,19 @@ public class User {
 		this.senha = senha;
 	}
 
-	public void setId(int id) {
+	public void setId(int id){
 		this.id = id;
 	}
+<<<<<<< HEAD
+	
+	public boolean equals(User u) {
+        if (u.getId() == this.id) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+=======
+
+>>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd
 }
