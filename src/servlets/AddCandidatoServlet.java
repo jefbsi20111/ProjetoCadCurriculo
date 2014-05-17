@@ -30,7 +30,11 @@ public class AddCandidatoServlet extends HttpServlet {
 
 		Candidato candidato;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		candidato = new Candidato(nome, cpf,  email,escolaridade, exp, area);
+=======
+		candidato = new Candidato(nome, cpf,email,escolaridade, exp, area);
+>>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd
 =======
 		candidato = new Candidato(nome, cpf,email,escolaridade, exp, area);
 >>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd

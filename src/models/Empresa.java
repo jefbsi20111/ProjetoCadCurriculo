@@ -2,6 +2,7 @@ package models;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 public class Empresa {
@@ -165,6 +166,8 @@ public class Empresa {
     }
 
 =======
+=======
+>>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd
 public class Empresa {
 
 /*private String razaoSocial;*/
@@ -279,5 +282,8 @@ String end, String senha) {
 	public void setEnd(String end) {
 		this.end = end;
 	}
+<<<<<<< HEAD
+>>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd
+=======
 >>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd
 }

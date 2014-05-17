@@ -25,7 +25,10 @@ public class AddEmpresaServlet extends HttpServlet {
 		String end = req.getParameter("end");
 		String senha = req.getParameter("senha");
 <<<<<<< HEAD
+<<<<<<< HEAD
 		
+=======
+>>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd
 =======
 >>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd
 

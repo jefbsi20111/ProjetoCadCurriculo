@@ -47,6 +47,7 @@ public class User {
 		this.id = id;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	public boolean equals(User u) {
         if (u.getId() == this.id) {
@@ -55,6 +56,9 @@ public class User {
             return false;
         }
     }
+=======
+
+>>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd
 =======
 
 >>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd

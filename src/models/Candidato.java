@@ -47,6 +47,9 @@ public class Candidato {
 		this.exp = exp;
 		this.area = area;
 		/*this.apendices = apendices;*/
+<<<<<<< HEAD
+>>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd
+=======
 >>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd
 	}
 	/**
@@ -114,6 +117,16 @@ public class Candidato {
 		return senha;
 	}
 
+<<<<<<< HEAD
+=======
+	/**
+	 * @param senha the senha to set
+	 */
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+>>>>>>> fe8309730806b02c1ec3b8fe803c88ff70ba57bd
 	/**
 	 * @param senha the senha to set
 	 */
