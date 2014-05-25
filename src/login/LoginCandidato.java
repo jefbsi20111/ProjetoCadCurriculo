@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebServlet;
 
 import models.User;
 
-@WebServlet(name="login", urlPatterns={"login-candidato"})
+//@WebServlet(name="login", urlPatterns={"login-candidato"})
 
 public class LoginCandidato extends HttpServlet {
 	

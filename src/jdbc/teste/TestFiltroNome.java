@@ -5,14 +5,12 @@ import java.util.List;
 import models.Candidato;
 import dao.CandidatoDAO;
 
-
-
-
-public class TestList {
+public class TestFiltroNome {
 
 	public static void main(String[] args) {
+		String str = "ma";
 		CandidatoDAO dao = new CandidatoDAO();
-		List<Candidato> candidatos = dao.listar();
+		List<Candidato> candidatos = dao.filtro_nome("%"+str+"%");
 		
 		for (Candidato candidato : candidatos) {
 			System.out.println("Série Cadastro: " + candidato.getId_candidato());
@@ -33,4 +31,6 @@ public class TestList {
 
 	}
 
-}
+
+	}
+
