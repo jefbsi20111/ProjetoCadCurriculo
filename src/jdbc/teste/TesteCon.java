@@ -10,11 +10,11 @@ public class TesteCon {
 	public static void main(String[] args)throws Throwable{
 		Candidato c = new Candidato();
 		 
-		c.setNome_candidato("tioga");
-		c.setEmail_candidato("tioga@mail.com");
-		c.setSenha_candidato("concursos");
-		c.setData_nasc_candidato("11/01/1998");
-		c.setCpf_candidato("66666323");
+		c.setNome_candidato("armando");
+		c.setEmail_candidato("armando@mail.com");
+		c.setSenha_candidato("ocihc");
+		c.setData_nasc_candidato("1998-02-20");
+		c.setCpf_candidato("123456789");
 		c.setEnd_candidato("Carnaubas");		
 		c.setTelefone_candidato("4668643");
 		c.setEscolaridade_candidato(3);

@@ -129,5 +129,64 @@ public class VagaDAO{
 		         throw new RuntimeException(e);
 		     }
 		 }
+	  
+	  /**
+	   * Método responsável por retornar uma lista de objetos Vagas;
+	   * **/
+	  public List<Vaga> filtro_vagas(String desc) {
+		     try {
+		         List<Vaga> vagas = new ArrayList<Vaga>();
+		         PreparedStatement stmt = this.connection.prepareStatement("select * from Vaga where desc_vaga like ?");
+		         stmt.setString(1, desc);
+		         ResultSet rs = stmt.executeQuery();
+		 
+		         while (rs.next()) {
+		             // criando o objeto Vaga
+		        	 Vaga vaga = new Vaga();
+		        	 vaga.setId_vaga(rs.getLong("id_vaga"));
+		        	 vaga.setCarga_horaria_vaga(rs.getInt("carga_horaria_vaga"));
+		        	 vaga.setRemuneracao_vaga(rs.getFloat("remuneracao_vaga"));
+		        	 vaga.setRequisitos_vaga(rs.getString("requisitos_vaga"));
+		        	 vaga.setDescricao_vaga(rs.getString("desc_vaga"));
+		        	 vaga.setEmpresa_id_empresa(rs.getLong("Empresa_id_empresa"));
+		        	 vaga.setEmpresa_email_empresa(rs.getString("Empresa_email_empresa"));
+		        	 
+		        	// adicionando o objeto à lista
+		        	 vagas.add(vaga);
+		         }
+		         rs.close();
+		         stmt.close();
+		         return vagas;
+		     } catch (SQLException e) {
+		         throw new RuntimeException(e);
+		     }
+		 }
+	  /**
+	   * Retorna uma vaga em especifico, pela sua id
+	   * **/
+	  public Vaga filtro_vagas_id(Long id) {
+		     try {
+		         PreparedStatement stmt = this.connection.prepareStatement("select * from Vaga id_vaga=?");
+		         stmt.setLong(1, id);
+		         ResultSet rs = stmt.executeQuery();
+		         Vaga vaga = new Vaga();
+		         while (rs.next()) {
+		             // criando o objeto Vaga
+		        	 
+		        	 vaga.setId_vaga(rs.getLong("id_vaga"));
+		        	 vaga.setCarga_horaria_vaga(rs.getInt("carga_horaria_vaga"));
+		        	 vaga.setRemuneracao_vaga(rs.getFloat("remuneracao_vaga"));
+		        	 vaga.setRequisitos_vaga(rs.getString("requisitos_vaga"));
+		        	 vaga.setDescricao_vaga(rs.getString("desc_vaga"));
+		        	 vaga.setEmpresa_id_empresa(rs.getLong("Empresa_id_empresa"));
+		        	 vaga.setEmpresa_email_empresa(rs.getString("Empresa_email_empresa"));
+		        }
+		         rs.close();
+		         stmt.close();
+		         return vaga;
+		     } catch (SQLException e) {
+		         throw new RuntimeException(e);
+		     }
+		 } 
 
 	}

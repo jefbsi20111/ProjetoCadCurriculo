@@ -126,5 +126,99 @@ public class EmpresaDAO{
 		         throw new RuntimeException(e);
 		     }
 		 }
+	  /**
+	   * --------------------------------------------------------
+	   * -----------PESQUISAS POR FILTROS------------------------
+	   * --------------------------------------------------------
+	   * **/
+	  /**
+	   * Pesquisa por nome de empresa
+	   * **/
+	  public List<Empresa> filtro_nome(String nome) {
+		     try {
+		         List<Empresa> empresas = new ArrayList<Empresa>();
+		         PreparedStatement stmt = this.connection.prepareStatement("select * from Empresa where nome_empresa like ?");
+		         stmt.setString(1, nome);
+		         ResultSet rs = stmt.executeQuery();
+		 
+		         while (rs.next()) {
+		             // criando o objeto Empresa
+		        	 Empresa empresa = new Empresa();
+		        	 empresa.setId_empresa(rs.getLong("id_empresa"));
+		        	 empresa.setNome_empresa(rs.getString("nome_empresa"));
+		        	 empresa.setEmail_empresa(rs.getString("email_empresa"));
+		        	 empresa.setSenha_empresa(rs.getString("senha_empresa"));
+		        	 empresa.setCnpj_empresa(rs.getString("cnpj_empresa"));
+		        	 empresa.setEnd_empresa(rs.getString("end_empresa"));
+		        	 empresa.setTelefone_empresa(rs.getString("telefone_empresa"));
+		 
+		        	// adicionando o objeto à lista
+		        	 empresas.add(empresa);
+		         }
+		         rs.close();
+		         stmt.close();
+		         return empresas;
+		     } catch (SQLException e) {
+		         throw new RuntimeException(e);
+		     }
+		 }
+	  /**
+	   * Pesquisa por email de empresa
+	   * **/
+	  public Empresa filtro_email(String email) {
+		     try {
+		         PreparedStatement stmt = this.connection.prepareStatement("select * from Empresa where email_empresa=?");
+		         stmt.setString(1, email);
+		         ResultSet rs = stmt.executeQuery();
+		         Empresa empresa = new Empresa();
+		         while (rs.next()) {
+		             // criando o objeto Empresa
+		        	 
+		        	 empresa.setId_empresa(rs.getLong("id_empresa"));
+		        	 empresa.setNome_empresa(rs.getString("nome_empresa"));
+		        	 empresa.setEmail_empresa(rs.getString("email_empresa"));
+		        	 empresa.setSenha_empresa(rs.getString("senha_empresa"));
+		        	 empresa.setCnpj_empresa(rs.getString("cnpj_empresa"));
+		        	 empresa.setEnd_empresa(rs.getString("end_empresa"));
+		        	 empresa.setTelefone_empresa(rs.getString("telefone_empresa"));
+		
+		         }
+		         rs.close();
+		         stmt.close();
+		         return empresa;
+		     } catch (SQLException e) {
+		         throw new RuntimeException(e);
+		     }
+		 }
+	  /**
+	   * Pesquisa por email de cnpj
+	   * **/
+	  public Empresa filtro_cnpj(String cnpj) {
+		     try {
+		         PreparedStatement stmt = this.connection.prepareStatement("select * from Empresa where cnpj_empresa=?");
+		         stmt.setString(1, cnpj);
+		         ResultSet rs = stmt.executeQuery();
+		         Empresa empresa = new Empresa();
+		         while (rs.next()) {
+		             // criando o objeto Empresa
+		        	 
+		        	 empresa.setId_empresa(rs.getLong("id_empresa"));
+		        	 empresa.setNome_empresa(rs.getString("nome_empresa"));
+		        	 empresa.setEmail_empresa(rs.getString("email_empresa"));
+		        	 empresa.setSenha_empresa(rs.getString("senha_empresa"));
+		        	 empresa.setCnpj_empresa(rs.getString("cnpj_empresa"));
+		        	 empresa.setEnd_empresa(rs.getString("end_empresa"));
+		        	 empresa.setTelefone_empresa(rs.getString("telefone_empresa"));
+		
+		         }
+		         rs.close();
+		         stmt.close();
+		         return empresa;
+		     } catch (SQLException e) {
+		         throw new RuntimeException(e);
+		     }
+		 }
 
 	}
+
+	

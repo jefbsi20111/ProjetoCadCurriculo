@@ -4,7 +4,7 @@ package models;
 
 public class Candidato {
 
-	private Long id;
+	private Long id_candidato;
 	private String nome_candidato;
 	private String email_candidato;
 	private String senha_candidato;
@@ -16,8 +16,8 @@ public class Candidato {
 	private String exp_candidato;
 	private String area_atuacao_candidato;
 	private String apendices_candidato;
-	public Long getId() {
-		return id;
+	public Long getId_candidato() {
+		return id_candidato;
 	}
 	public String getNome_candidato() {
 		return nome_candidato;
@@ -52,8 +52,8 @@ public class Candidato {
 	public String getApendices_candidato() {
 		return apendices_candidato;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setId_candidato(Long id) {
+		this.id_candidato = id;
 	}
 	public void setNome_candidato(String nome_candidato) {
 		this.nome_candidato = nome_candidato;
@@ -88,5 +88,14 @@ public class Candidato {
 	public void setApendices_candidato(String apendices_candidato) {
 		this.apendices_candidato = apendices_candidato;
 	}
+	
+	public boolean equals(Candidato c) {
+	    if (c.getEmail_candidato() == this.email_candidato) {
+	        return true;
+	    } else {
+	        return false;
+	    }
+	}
+
 	
 }

@@ -16,8 +16,8 @@ import models.Candidato;
 
 public class CandidatoDAO{
 	// a conexão com o banco de dados
-	  private Connection connection;
-	  private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	private Connection connection;
+	private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 	  
 	  
 	  public CandidatoDAO() {
@@ -148,5 +148,113 @@ public class CandidatoDAO{
 		         throw new RuntimeException(e);
 		     }
 		 }
-
-	}
+	  
+	  /**
+	   * --------------------------------------------------------
+	   * -----------PESQUISAS POR FILTROS------------------------
+	   * --------------------------------------------------------
+	   * **/
+	  /**
+	   * Método que retorna um candidato, pelo email;
+	   * Passa o email do usuário da seção junto com o identificador de seção usuário (coisas da view);
+	   **/
+	  public Candidato filtro_email(String email) {
+		     try {
+		         PreparedStatement stmt = this.connection.prepareStatement("select * from Candidato where email_candidato=?");
+		         stmt.setString(1, email);
+		         ResultSet rs = stmt.executeQuery();
+		         Candidato candidato = new Candidato();
+		         while (rs.next()) {
+		             // criando o objeto Candidato
+		        	 //A senha do candidato vai no objeto, é uma má prática?
+		        	 candidato.setId_candidato(rs.getLong("id_candidato"));
+		        	 candidato.setNome_candidato(rs.getString("nome_candidato"));
+		        	 candidato.setEmail_candidato(rs.getString("email_candidato"));
+		        	 candidato.setSenha_candidato(rs.getString("senha_candidato"));
+		        	 candidato.setData_nasc_candidato(rs.getString("data_nasc_candidato"));
+		        	 candidato.setCpf_candidato(rs.getString("cpf_candidato"));
+		        	 candidato.setEnd_candidato(rs.getString("end_candidato"));
+		        	 candidato.setTelefone_candidato(rs.getString("telefone_candidato"));
+		        	 candidato.setEscolaridade_candidato(rs.getInt("escolaridade_candidato"));
+		        	 candidato.setExp_candidato(rs.getString("exp_candidato"));
+		        	 candidato.setArea_atuacao_candidato(rs.getString("area_atuacao_candidato"));
+		        	 candidato.setApendices_candidato(rs.getString("apendices_candidato"));
+		         }
+		         rs.close();
+		         stmt.close();
+		         return candidato;
+		     } catch (SQLException e) {
+		         throw new RuntimeException(e);
+		     }
+		 }
+	  
+	  /**
+	   * Método que retorna um candidato, pelo CPF;
+	   * Passa o CPF do usuário da seção junto com o identificador de seção usuário (coisas da view);
+	   **/
+	  public Candidato filtro_cpf(String cpf) {
+		     try {
+		         PreparedStatement stmt = this.connection.prepareStatement("select * from Candidato where cpf_candidato=?");
+		         stmt.setString(1, cpf);
+		         ResultSet rs = stmt.executeQuery();
+		         Candidato candidato = new Candidato();
+		         while (rs.next()) {
+		             // criando o objeto Candidato
+		        	 //A senha do candidato vai no objeto, é uma má prática?
+		        	 candidato.setId_candidato(rs.getLong("id_candidato"));
+		        	 candidato.setNome_candidato(rs.getString("nome_candidato"));
+		        	 candidato.setEmail_candidato(rs.getString("email_candidato"));
+		        	 candidato.setSenha_candidato(rs.getString("senha_candidato"));
+		        	 candidato.setData_nasc_candidato(rs.getString("data_nasc_candidato"));
+		        	 candidato.setCpf_candidato(rs.getString("cpf_candidato"));
+		        	 candidato.setEnd_candidato(rs.getString("end_candidato"));
+		        	 candidato.setTelefone_candidato(rs.getString("telefone_candidato"));
+		        	 candidato.setEscolaridade_candidato(rs.getInt("escolaridade_candidato"));
+		        	 candidato.setExp_candidato(rs.getString("exp_candidato"));
+		        	 candidato.setArea_atuacao_candidato(rs.getString("area_atuacao_candidato"));
+		        	 candidato.setApendices_candidato(rs.getString("apendices_candidato"));
+		         }
+		         rs.close();
+		         stmt.close();
+		         return candidato;
+		     } catch (SQLException e) {
+		         throw new RuntimeException(e);
+		     }
+		 }
+	  /**
+	   * Método que retorna um candidato, pelo nome;
+	   * Passa o nome do usuário da seção junto com o identificador de seção usuário (para chamar a pesquisa certa);
+	   **/
+	  public List<Candidato> filtro_nome(String nome) {
+		     try {
+		    	 List<Candidato> candidatos = new ArrayList<Candidato>();
+		         PreparedStatement stmt = this.connection.prepareStatement("select * from Candidato where nome_candidato like ?");
+		         stmt.setString(1, nome);
+		         ResultSet rs = stmt.executeQuery();
+		         
+		         while (rs.next()) {
+		             // criando o objeto Candidato
+		        	 //A senha do candidato vai no objeto, é uma má prática?
+		        	 Candidato candidato = new Candidato();
+		        	 candidato.setId_candidato(rs.getLong("id_candidato"));
+		        	 candidato.setNome_candidato(rs.getString("nome_candidato"));
+		        	 candidato.setEmail_candidato(rs.getString("email_candidato"));
+		        	 candidato.setSenha_candidato(rs.getString("senha_candidato"));
+		        	 candidato.setData_nasc_candidato(rs.getString("data_nasc_candidato"));
+		        	 candidato.setCpf_candidato(rs.getString("cpf_candidato"));
+		        	 candidato.setEnd_candidato(rs.getString("end_candidato"));
+		        	 candidato.setTelefone_candidato(rs.getString("telefone_candidato"));
+		        	 candidato.setEscolaridade_candidato(rs.getInt("escolaridade_candidato"));
+		        	 candidato.setExp_candidato(rs.getString("exp_candidato"));
+		        	 candidato.setArea_atuacao_candidato(rs.getString("area_atuacao_candidato"));
+		        	 candidato.setApendices_candidato(rs.getString("apendices_candidato"));
+		        	 candidatos.add(candidato);
+		         }
+		         rs.close();
+		         stmt.close();
+		         return candidatos;
+		     } catch (SQLException e) {
+		         throw new RuntimeException(e);
+		     }
+		 }
+}
