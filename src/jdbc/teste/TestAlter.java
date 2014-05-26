@@ -9,11 +9,11 @@ public class TestAlter {
 
 	public static void main(String[] args) throws ParseException {
 		Candidato c = new Candidato();
-		String s = "dudu";
+		String email = "fulano@mail.hue";
 		 
 		c.setId_candidato((long) 1);
 		c.setNome_candidato("Eduardo");
-		c.setEmail_candidato("dudu@mail.com");
+		c.setEmail_candidato("fulano@mail.hue");
 		c.setSenha_candidato("parada");
 		c.setData_nasc_candidato("22/05/1998");
 		c.setCpf_candidato("666663333");
@@ -27,7 +27,7 @@ public class TestAlter {
 		CandidatoDAO dao = new CandidatoDAO();
 		 
 		 // método elegante
-		 dao.alterar(c,s);
+		 dao.alterar(c,email);
 
 	}
 

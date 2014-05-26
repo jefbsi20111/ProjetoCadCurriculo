@@ -8,16 +8,24 @@ import dao.VagaDAO;
 
 public class TestInsertCHV {
 
-	public static void main(String[] args) throws Throwable {
+	public static void main(String[] args) throws Throwable  {
 		CandidatoDAO cd = new CandidatoDAO();
 		VagaDAO vd = new VagaDAO();
-		Candidato candidato = cd.filtro_email("fulano@mail.hue");
-		Vaga vaga = vd.filtro_vagas_id((long) 3);
-		
 		CandidatoHasVagaDAO chvdao = new CandidatoHasVagaDAO();
-		chvdao.adicionar(candidato,vaga);
-		System.out.println("Adicionado!");
-
+		
+		Candidato candidato = new Candidato();		
+		Vaga vaga = new Vaga();
+		
+		candidato = cd.filtro_email("chico@mail.com");System.out.println("cd.filtro_email -----> Done!");
+		vaga = vd.filtro_vagas_id((long) 2);System.out.println("cd.filtro_vagas_id -----> Done!");
+		
+		System.out.println("Série Usuário: "+candidato.getId_candidato());
+		System.out.println("Email Usuário: "+candidato.getEmail_candidato());
+		System.out.println("Série  Vaga: "+vaga.getId_vaga());
+		System.out.println("Série Empresa: "+vaga.getEmpresa_id_empresa());
+		System.out.println("Email Empresa: "+vaga.getEmpresa_email_empresa());
+		System.out.println("---------------------------------------\n");
+		chvdao.adicionar(candidato,vaga);System.out.println("Adicionado!");
 	}
 
 }

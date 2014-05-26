@@ -166,13 +166,11 @@ public class VagaDAO{
 	   * **/
 	  public Vaga filtro_vagas_id(Long id) {
 		     try {
-		         PreparedStatement stmt = this.connection.prepareStatement("select * from Vaga id_vaga=?");
-		         stmt.setLong(1, id);
+		         PreparedStatement stmt = this.connection.prepareStatement("select * from Vaga where id_vaga=?");
+		         stmt.setLong(1,id);
 		         ResultSet rs = stmt.executeQuery();
 		         Vaga vaga = new Vaga();
-		         while (rs.next()) {
-		             // criando o objeto Vaga
-		        	 
+		         while (rs.next()) {		             		        	 
 		        	 vaga.setId_vaga(rs.getLong("id_vaga"));
 		        	 vaga.setCarga_horaria_vaga(rs.getInt("carga_horaria_vaga"));
 		        	 vaga.setRemuneracao_vaga(rs.getFloat("remuneracao_vaga"));

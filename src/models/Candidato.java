@@ -2,6 +2,8 @@ package models;
 
 
 
+
+
 public class Candidato {
 
 	private Long id_candidato;
@@ -28,8 +30,8 @@ public class Candidato {
 	public String getSenha_candidato() {
 		return senha_candidato;
 	}
-	public String getData_nasc_candidato() {
-		return data_nasc_candidato;
+	public String getData_nasc_candidato() {    
+		  return  data_nasc_candidato;
 	}
 	public String getCpf_candidato() {
 		return cpf_candidato;
@@ -96,6 +98,7 @@ public class Candidato {
 	        return false;
 	    }
 	}
-
+	
+	
 	
 }

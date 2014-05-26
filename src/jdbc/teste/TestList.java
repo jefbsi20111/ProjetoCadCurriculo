@@ -1,5 +1,6 @@
 package jdbc.teste;
 
+import java.text.ParseException;
 import java.util.List;
 
 import models.Candidato;
@@ -10,7 +11,7 @@ import dao.CandidatoDAO;
 
 public class TestList {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		CandidatoDAO dao = new CandidatoDAO();
 		List<Candidato> candidatos = dao.listar();
 		

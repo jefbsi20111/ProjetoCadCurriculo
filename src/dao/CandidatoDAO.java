@@ -17,7 +17,7 @@ import models.Candidato;
 public class CandidatoDAO{
 	// a conexão com o banco de dados
 	private Connection connection;
-	private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	  
 	  
 	  public CandidatoDAO() {
@@ -67,14 +67,18 @@ public class CandidatoDAO{
 	  
 	  /**
 	   * Método responsável por retornar uma lista de objetos Empresa;
+	 * @throws ParseException 
 	   * **/
-	  public List<Candidato> listar() {
+	  public List<Candidato> listar() throws ParseException {
 		     try {
 		         List<Candidato> candidatos = new ArrayList<Candidato>();
 		         PreparedStatement stmt = this.connection.
 		                 prepareStatement("select * from Candidato");
 		         ResultSet rs = stmt.executeQuery();
-		 
+		         SimpleDateFormat in= new SimpleDateFormat("yyyy-MM-dd");  
+		         SimpleDateFormat out = new SimpleDateFormat("dd/MM/yyyy");  
+		           
+		          
 		         while (rs.next()) {
 		             // criando o objeto Empresa
 		        	 Candidato candidato = new Candidato();
@@ -82,7 +86,10 @@ public class CandidatoDAO{
 		        	 candidato.setNome_candidato(rs.getString("nome_candidato"));
 		        	 candidato.setEmail_candidato(rs.getString("email_candidato"));
 		        	 candidato.setSenha_candidato(rs.getString("senha_candidato"));
-		        	 candidato.setData_nasc_candidato(rs.getString("data_nasc_candidato"));
+		        	 java.util.Date data = new java.util.Date();
+		        	 data = rs.getDate("data_nasc_candidato");
+		        	 String result = out.format(in.parse(data.toString()));
+		        	 candidato.setData_nasc_candidato(result);
 		        	 candidato.setCpf_candidato(rs.getString("cpf_candidato"));
 		        	 candidato.setEnd_candidato(rs.getString("end_candidato"));
 		        	 candidato.setTelefone_candidato(rs.getString("telefone_candidato"));
@@ -111,9 +118,9 @@ public class CandidatoDAO{
 	   * Método para alterar um objeto no BD
 	 * @throws ParseException 
 	   * **/
-	  public void alterar(Candidato candidato, String s) throws ParseException {
+	  public void alterar(Candidato candidato, String email) throws ParseException {
 		  //Não funciona
-		  String sql = "update Candidato set id_candidato=?,nome_candidato=?,email_candidato=?,senha_candidato=?,data_nasc_candidato=?,cpf_candidato=?,end_candidato=?,telefone_candidato=?,escolaridade_candidato=?,exp_candidato=?,area_atuacao_candidato=?,apendices_candidato=? where nome_candidato=?";
+		  String sql = "update Candidato set id_candidato=?,nome_candidato=?,email_candidato=?,senha_candidato=?,data_nasc_candidato=?,cpf_candidato=?,end_candidato=?,telefone_candidato=?,escolaridade_candidato=?,exp_candidato=?,area_atuacao_candidato=?,apendices_candidato=? where email_candidato=?";
 		  try {
 		         PreparedStatement stmt = connection.prepareStatement(sql);
 		         stmt.setLong(1,candidato.getId_candidato());
@@ -129,7 +136,7 @@ public class CandidatoDAO{
 			      stmt.setString(10,candidato.getExp_candidato());
 			      stmt.setString(11,candidato.getArea_atuacao_candidato());
 			      stmt.setString(12,candidato.getApendices_candidato());
-		          stmt.setString(13,s);
+		          stmt.setString(13,email);
 		         stmt.execute();
 		         stmt.close();
 		     } catch (SQLException e) {
